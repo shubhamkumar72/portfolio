@@ -83,7 +83,7 @@ header nav .nav-links a{
 }
 header nav .nav-links a:hover,
 header nav .nav-links a.active{
-    color: #ffaa17;
+    color: #1f1401;
 }
 
 #btn-menu{
@@ -95,35 +95,51 @@ header nav .nav-links a.active{
 
 /* start Hero */
 
+/* Animation for Name */
+#animated-name {
+    animation: bounce 1.5s infinite;
+}
 
+@keyframes bounce {
+    40%, 30% {
+        transform: translateX(15);
+    }
+    40%, 30%{
+        transform: translateX(-15px);
+    }
+}
 .hero .contanier{
     
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between ;
     align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
+
+
 }
-.hero .content h4{
+.hero .content h3{
     
-    color: #0f5a9c;
-    font-size: 30px;
-}
-.hero .content h1{
-    color: #e79595;
-    font-size: 65px;
-    margin: 20px 0 10px;
+    color: #0e52cf;
+    font-size: 25px;
+    margin: 30px  20px;
 }
 .hero .content p{
-    color: #09569f;
+    
+    color: #6b149c;
     font-size: 30px;
     font-weight: bold;
-    margin-bottom: 70px;
+    margin-bottom: 40px;
 }
 .hero .content .btn{
     font-size: 20px;
+    
 }
 .hero .hero-img img{
-    padding-top: px;
-    background: url(images/bg5.jpg);
+    position: relative;
+    top: 50px;
+    padding-top: 10px;
+    background: url(images/skimg3.jpg);
     min-height: 10vh;
     min-width: 5;
     display: flex;
@@ -149,14 +165,14 @@ header nav .nav-links a.active{
 }
 .about .content h1{
     color: #1c1e22;
-    font-size: 45px;
+    font-size: 35px;
 }
 .about .content h1 span{
     color: #ffaa17;
 }
 .about .content h3{
     color: #2d4678;
-    font-size: 20px;
+    font-size: 40px;
     font-weight: 600;
     margin-bottom: 40px;
 }
@@ -164,6 +180,9 @@ header nav .nav-links a.active{
     color: #000000;
     line-height: 1.8;
     margin-bottom:90px;
+    font-style:Serif;
+    font-weight: bold;
+    
 }
 
 /* start Skills */
@@ -182,7 +201,7 @@ header nav .nav-links a.active{
     border-radius: 10px;
     box-shadow: 0px 5px 20px 0px rgba(128, 112, 22, 0.2);
     position: relative;
-    top: 0;
+    top: 5;
 }
 .skills .boxs .box:hover{
     top: -25px;
@@ -248,7 +267,7 @@ header nav .nav-links a.active{
 }
 
 .projects .project-item p {
-    color: #ffaa17;
+    color: #01040b;
     font-size: 20px;
     line-height: 1.5;
 }
@@ -257,77 +276,162 @@ header nav .nav-links a.active{
     transform: scale(1.05);
 }
 
-/* start Portfolio */
-.Education .boxs .box{
-    margin-bottom: 50px;
-    position: relative;
-    overflow: hidden;
+/* Certificate Section */
+.certificates {
+    padding: 10px 0;
+    text-align: center;
 }
-.Education  .boxs .box img{
-    width: 100%;
-    height: 100%;
-}
-.Education  .boxs .box:hover img{
-    transform: scale(1.2);
-    rotate: -4deg;
-    transition: 0.6s ease-out;
-}
-.Education .boxs .box .box-hover{
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    background: #111111b9;
-    z-index: 2;
+
+.certificates .container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.6s;
-    opacity: 0;
-}
-.Education  .boxs .box:hover .box-hover{
-    opacity: 1;
-}
-.Education  .boxs .box .box-hover span{
-    color: #fff;
-    font-size: 25px;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center horizontally */
 }
 
-/* start Contact */
+.certificates .sec-top h1 {
+    color: #1c1e22;
+    font-size: 40px;
+    margin-bottom: 50px;
+}
 
-
-.contact form{
-    width: 60%;
-    margin: auto;
+.certificates .boxs {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.contact form input{
-    width: 48%;
-    font-size: 18px;
-    padding: 15px 10px;
-    outline: none;
-    border: 1px solid rgba(16, 14, 3, 0.3);
+
+.certificates .box {
+    width: 20%;
     margin-bottom: 20px;
     border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
 }
-.contact form textarea{
-    border: 1px solid rgba(15, 13, 1, 0.3);
-    outline: none;
-    border-radius: 10px;
+
+.certificates .box:hover {
+    transform: scale(1.05);
+}
+
+.certificates .box img {
     width: 100%;
-    padding: 10px;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
-.contact form textarea:focus,
-.contact form input:focus{
-    border-color: #ffaa17;
+
+.certificates .box h3 {
+    color: #1c1e22;
+    font-size: 24px;
+    margin: 20px 0;
 }
-.contact form button{
-    margin: 40px auto 0;
+
+.certificates .box p {
+    color: #444;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+
+/* Education Section */
+.Education {
+    padding: 60px 0;
+    text-align: center;
+    padding: 10;
+}
+
+.Education .container {
+    text-align: center;
+}
+
+.Education .sec-top h1 {
+    color: #1c1e22;
+    font-size: 40px;
+    margin-bottom: 50px;
+    
+    
+}
+
+.Education .boxs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10;
+    
+}
+
+.Education .box img {
+    width: 50px;
+    height: 50px;
+    
+}
+
+.Education .box h3 {
+    color: #1c1e22;
+    font-size: 24px;
+    margin: 20px 0;
+    
+}
+
+.Education .box p {
+    color: #444;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+
+/* Contact Section */
+.contact {
+    padding: 20px 0;
+    background: #f0f4f9;
+    text-align: center;
+}
+
+.contact .container {
+    text-align: center;
+}
+
+.contact .sec-top h1 {
+    color: #1c1e22;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.contact ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact li {
+    margin: 0 20px;
+}
+
+.contact img {
+    width: 30px; /* Adjust the width as needed */
+    height: 30px; /* Adjust the height as needed */
     cursor: pointer;
 }
+
+.contact img:hover {
+    opacity: 0.7;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #1c1e22;
+    color: #fff;
+    padding: 2px 0;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+}
+
+
+    
+
 /* Media */
 
 @media(max-width:1200px){
@@ -455,7 +559,7 @@ header nav .nav-links a.active{
 
     }
     .boxs .box{
-        width: 70%;
+        width: 90%;
     }
     .contact form{
         width: 90%;
@@ -474,7 +578,6 @@ header nav .nav-links a.active{
         width: 100%;
     }
 }
-/* Add media queries for different screen resolutions */
 
 /* For screens with a maximum width of 1200px */
 @media (max-width: 1200px) {
@@ -500,3 +603,4 @@ header nav .nav-links a.active{
         margin-right: 0;
     }
 }
+
