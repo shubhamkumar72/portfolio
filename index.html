@@ -1,605 +1,319 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700;800&family=Rajdhani:wght@300;400;500;600;700&family=Rubik:wght@300;400;500;600;700&display=swap');
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Rubik', sans-serif;
-    text-decoration: none;
-    transition: 0.3s;
-}
-*::selection{
-    background-color: #ffaa17;
-    color: #f5f;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
 
-html{
-    scroll-behavior: smooth;
-}
-.contanier{
-    width: 85%;
-    margin: auto;
-}
-.btn{
-    padding: 15px 30px;
-    color: #1c1e22;
-    font-weight: 500;
-    background-color: #ffaa17;
-    border-radius: 10px;
-    border: 1px solid #ffaa17;
-}
-.btn:hover{
-    color: #ffaa17;
-    background: #f1ff;
-}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- link file css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body{
+        
 
-section{
-    padding: 90px 0 40px;
-}
+        background-image: url('images/bg1.jpg');
+        
+        background-repeat:no-repeat;
+        background-attachment: fixed;
+        background-size:100% 100%;
 
-.sec-top{
-    text-align: center;
-    margin-bottom: 70px;
-}
-.sec-top h1{
-    color: #1c1e22;
-    font-size: 40px;
-}
-.sec-top h1 span{
-    color: #ffaa17;
-}
-
-.boxs{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-.boxs .box{
-    width: 30%;
-}
-/* start Header */
-
-header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: transparent;
-    z-index: 1000;
-
-}
-header.active{
-    background-color: #39404d;
-    border-bottom: 1px solid #8888884a;
-}
-header nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 80px;
-}
-header nav .nav-links a{
-    color: #f1ff;
-    margin-left: 50px;
-}
-header nav .nav-links a:hover,
-header nav .nav-links a.active{
-    color: #1f1401;
-}
-
-#btn-menu{
-    display: none;
-}
-
-
-
-
-/* start Hero */
-
-/* Animation for Name */
-#animated-name {
-    animation: bounce 1.5s infinite;
-}
-
-@keyframes bounce {
-    40%, 30% {
-        transform: translateX(15);
     }
-    40%, 30%{
-        transform: translateX(-15px);
-    }
-}
-.hero .contanier{
-    
-    display: flex;
-    justify-content: space-between ;
-    align-items: center;
-    margin-top: auto;
-    margin-bottom: auto;
 
 
-}
-.hero .content h3{
-    
-    color: #0e52cf;
-    font-size: 25px;
-    margin: 30px  20px;
-}
-.hero .content p{
-    
-    color: #6b149c;
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 40px;
-}
-.hero .content .btn{
-    font-size: 20px;
-    
-}
-.hero .hero-img img{
-    position: relative;
-    top: 50px;
-    padding-top: 10px;
-    background: url(images/skimg3.jpg);
-    min-height: 10vh;
-    min-width: 5;
-    display: flex;
-    justify-content: center;
-    border-radius: 55px;
-    align-items: center;
-}
- /* start about */ 
+</style>
+    <header>
+        <nav class="contanier">
+            <img class="logo" src="" alt="">
+            <i id="btn-menu" class="fa-solid fa-bars"></i>
+            <div class="nav-links">
+                
+                <a href="#home" class="active">Home</a>
+                <a href="#about" class="active">About</a>
+                <a href="#skills"class="active">My Skills</a>
+                <a href="#projects"class="active">Projects</a>
+                <a href="#Education"class="active">Education</a>
+                <a href="#Contact"class="active">Contact</a>
+                
 
- .about {
-    padding: 90px 0 50px;
- }
-.about .contanier{
-    display: flex;
-    justify-content: center;
-}
-.about .about-img img{
-    width: 450px;
-    border-radius: px;
-}
-.about .content{
-    margin-left: 30px;
-}
-.about .content h1{
-    color: #1c1e22;
-    font-size: 35px;
-}
-.about .content h1 span{
-    color: #ffaa17;
-}
-.about .content h3{
-    color: #2d4678;
-    font-size: 40px;
-    font-weight: 600;
-    margin-bottom: 40px;
-}
-.about .content p{
-    color: #000000;
-    line-height: 1.8;
-    margin-bottom:90px;
-    font-style:Serif;
-    font-weight: bold;
-    
-}
+               
+            </div>
+        </nav>
+    </header>
+<!-- start home sec -->
+    <div class="hero" id="home">
+        
+        <div class="contanier">
+            <div class="content">
+                <h2><br></h2>
+                <h4>Hello, I'm</h3>
+                <h2 id="animated-name">SHUBHAM KUMAR</h2>
+                <p>Software Developer</p>
+                <a href="https://drive.google.com/drive/folders/1HDqOOC4gkXKDouP6GdA2r31Yv2ou3pEy?usp=sharing" class="btn">Download CV</a>
+            </div>
+            
 
-/* start Skills */
-.skills .box img {
-    border-radius: 10px; /* Add border-radius for curved corners */
-}
+            <div class="hero-img">
+                
+                <img src="images/skimg3.jpg" width="300" height="400" >
+                
+            </div>
+        </div>
+    </div>
 
-.skils{
-    background-color: #f0f4f9;
-    text-align: center;
-    
-}
-.skill .box{
-    background-color: #fff;
-    padding: 40px 20px;
-    border-radius: 10px;
-    box-shadow: 0px 5px 20px 0px rgba(128, 112, 22, 0.2);
-    position: relative;
-    top: 5;
-}
-.skills .boxs .box:hover{
-    top: -25px;
-}
-.skills .boxs .box i{
-    color: #ffaa17;
-    font-size: 50px;
-    margin-bottom: 20px;
-}
-.skills.boxs .box h3{
-    color: #1c1e22;
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-.skills .boxs .box p{
-    color: #444;
-    margin-bottom: 50px;
-}
-/* Project Section */
-.projects {
-    
-    padding: 10px 0;
-    text-align: center;
-    
-}
+    <!-- start about sec -->
 
-.projects .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    <section id="about" class="about">
+        <div class="contanier">
+            <div class="about-img">
+                <img src="https://drive.google.com/file/d/1TmRCsTdyHc7g4vAdSpvRGctP3t4xu5_B/view?usp=sharing" alt="">
+            </div>
+            <div class="content">
+                <h1>About <span>Me</span></h1>
+                <h3>Front-End Developer</h3>
+                <p>I am a final-year student in Computer Science with a strong foundation in Software Development and Data Structures. I consider myself a responsible and self-motivated individual with a passion for delivering optimal solutions. Eager to kickstart my career, I aim to leverage my technical skills to contribute value and drive success for a
+                    forward-thinking technology team.</p>
 
-.projects .sec-top h1 {
-    color: #1c1e22;
-    font-size: 50px;
-}
+            </div>
+        </div>
+    </section>
 
-.projects .project {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
+    <!-- SKILLS -->
 
-.projects .project-item {
+    <section id="skills" class="skills">
+        <div class="contanier">
+            <div class="sec-top">
+                <h1>My<span> Skills</span></h1>
+            </div>
 
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px;
-    
-    transition: transform 0.3s ease-in-out;
-}
+            <div class="boxs">
 
-.projects .project-item img {
-    max-width: 60%;
-    height: auto;
-    border-radius: 10px;
-}
+                <div class="box">
+                    <h3>C</h3><img src="images/c.jpg" height="70">
+                    
+                </div>
 
-.projects .project-item h3 {
-    color: #01040b;
-    font-size: 25px;
-    margin: 20px 0;
-}
+                <div class="box">
+                    <h3>python</h3><img src="images/py.jpg" height="70">
+                    
+                </div>
 
-.projects .project-item p {
-    color: #01040b;
-    font-size: 20px;
-    line-height: 1.5;
-}
+                <div class="box">
+                    <h3>JAVA</h3><img src="images/JAVA.png" height="70">
+                    
+                </div>
+                <div class="box">
+                    <h3>HTML CSS</h3><img src="images/html.png" height="70">
+                </div>
+                <div class="box">
+                    <h3>Data Science</h3><img src="images/ds.jpg"height="70">
+                </div>
+                <div class="box">
+                    <h3>Sql</h3><img src="images/sql.jpg" height="70">
+                </div>
 
-.projects .project-item:hover {
-    transform: scale(1.05);
-}
-
-/* Certificate Section */
-.certificates {
-    padding: 10px 0;
-    text-align: center;
-}
-
-.certificates .container {
-    display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center horizontally */
-}
-
-.certificates .sec-top h1 {
-    color: #1c1e22;
-    font-size: 40px;
-    margin-bottom: 50px;
-}
-
-.certificates .boxs {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.certificates .box {
-    width: 20%;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.certificates .box:hover {
-    transform: scale(1.05);
-}
-
-.certificates .box img {
-    width: 100%;
-    height: auto;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-
-.certificates .box h3 {
-    color: #1c1e22;
-    font-size: 24px;
-    margin: 20px 0;
-}
-
-.certificates .box p {
-    color: #444;
-    font-size: 18px;
-    margin: 10px 0;
-}
+            </div>
+        </div>
+    </section>
 
 
-/* Education Section */
-.Education {
-    padding: 60px 0;
-    text-align: center;
-    padding: 10;
-}
+    <!-- start Projects -->
+<section id="projects" class="projects">
+    <div class="container">
+        <div class="sec-top">
+            <h1>Projects</h1>
+        </div>
 
-.Education .container {
-    text-align: center;
-}
+        <div class="project">
+            <div class="project-item">
+                <img src="images/movie1.gif" alt="Project 1" style="width:1000px;height:auto;">
+                <h3>Movies Recommending System</h3>
+                <h3><button onclick="location.href='images/shubhamresume.pdf'">click here</button></h3>
+                
+                <p>Built a movie recommendation system <br> using Machine Learning and the TMDb dataset,<br>  enhancing user search results with personalized movie suggestions.</p>
+            </div>
 
-.Education .sec-top h1 {
-    color: #1c1e22;
-    font-size: 40px;
-    margin-bottom: 50px;
-    
-    
-}
+            <div class="project-item">
+                
+                <img src="images/cricket.gif" alt="Project 2" style="width:700px;height: 300px;;">
+                <h3>Cricket Game</h3>
+                <h3><button onclick="location.href='images/shubhamresume.pdf'">click here</button></h3>
+                <p>Designed Python cricket game with  voice input,two-player/single-player <br>modes, real- time scoring, and intuitive controls</p>
+            </div>
 
-.Education .boxs {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 10;
-    
-}
+            <div class="project-item">
+                <img src="images/alexa1.gif" alt="Project 3" style="width:300px;height: 300px;;">
+                <h3>MUSIC PLAYER like alexa</h3>
+                <h3><button onclick="location.href='images/shubhamresume.pdf'">click here</button></h3>
+                <p>Using python module i have implemented a voice assistant like alexa that can search on google to replay questions and youtube to play songs</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-.Education .box img {
-    width: 50px;
-    height: 50px;
-    
-}
-
-.Education .box h3 {
-    color: #1c1e22;
-    font-size: 24px;
-    margin: 20px 0;
-    
-}
-
-.Education .box p {
-    color: #444;
-    font-size: 18px;
-    margin: 10px 0;
-}
-
-
-/* Contact Section */
-.contact {
-    padding: 20px 0;
-    background: #f0f4f9;
-    text-align: center;
-}
-
-.contact .container {
-    text-align: center;
-}
-
-.contact .sec-top h1 {
-    color: #1c1e22;
-    font-size: 40px;
-    margin-bottom: 30px;
-}
-
-.contact ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.contact li {
-    margin: 0 20px;
-}
-
-.contact img {
-    width: 30px; /* Adjust the width as needed */
-    height: 30px; /* Adjust the height as needed */
-    cursor: pointer;
-}
-
-.contact img:hover {
-    opacity: 0.7;
-}
-
-/* Footer Section */
-.footer {
-    background-color: #1c1e22;
-    color: #fff;
-    padding: 2px 0;
-    text-align: center;
-}
-
-.footer p {
-    margin: 0;
-}
+<!-- Certificate Section -->
+<section id="certificates" class="certificates">
+    <div class="container">
+        <div class="sec-top">
+            <h1>Certificates</h1>
+        </div>
+        <div class="boxs">
+            <!-- Certificate Item 1 -->
+            <div class="box">
+                <img src="images/google.png" alt="Certificate 1">
+                <h3>Google Cloud Big Data and Machine Learning</h3>
+                <p>Issued by:  Google and offered through Cousera</p>
+                <p>Date: 22 Jun 2022</p>
+            </div>
+            <!-- Certificate Item 2 -->
+            <div class="box">
+                <img src="images/googlepython.png" alt="Certificate 2">
+                <h3>Crash Course on Python</h3>
+                <p>Issued by: Google and offered through Coursera</p>
+                <p>Date: 7 sep. 2023</p>
+            </div>
+            <!-- Certificate Item 3-->
+            <div class="box">
+                <img src= "images/tcsiqn.png" alt="Certificate 3">
+                <h3>TCS iON Career Edge - Young Professiona</h3>
+                <p>Issued by: tcs iQN/p>
+                <p>Date: 2 july 2023</p>
+            </div>
+            <!-- Certificate Item 4 -->
+            <div class="box">
+                <img src= "images/aws.png"  alt="Certificate 4">
+                <h3>Introduction to AWS Organizations</h3>
+                <p>Issued by: AWS training and certification</p>
+                <p>Date: Date 6 may 2022</p>
+            </div>
+            <!-- Certificate Item 5-->
+            <div class="box">
+                <img src="images/flipcart.png" alt="Certificate 5">
+                <h3>Flipkart GRiD 5.0 - Software Development Track</h3>
+                <p>Issued by: Unstop</p>
+                <p>Date: 10 Aug. 2023</p>
+            </div>
+            <!-- Certificate Item 6-->
+            <div class="box">
+                <img src= "images/tvs.png"  alt="Certificate 6">
+                <h3>TVS Credit E.P.I.C 5.0 — IT Challenge</h3>
+                <p>Issued by: Unstop </p>
+                <p>Date:31 Aug. 2023</p>         
+            </div>
+               <!-- Certificate Item 7-->
+               <div class="box">
+                <img src="images/gouravgo.png" alt="Certificate 7">
+                <h3>Web Development & Hosting Intenship</h3>
+                <p>Issued by: Cousera</p>
+                <p>Date: 6 july 2023</p>
+            </div>
+            <!-- Certificate Item 8 -->
+            <div class="box">
+                <img src= "images/bharatai.png"  alt="Certificate 8">
+                <h3>Virtual Internship program Artificial Intelligence</h3>
+                <p>Issued by: Bharat Intern(MSME)</p>
+                <p>Date: 10 june 2023</p>
+            </div>
+            <!-- Certificate Item 9 -->
+            <div class="box">
+                <img src="images/learnsmasherr.png" alt="Certificate 9">
+                <h3>Python Programming at LearnSmasher</h3>
+                <p>Issued by: at LearnSmasher(MSME)</p>
+                <p>Date: 11 JUNE 2023</p>
+            </div>
+            <!-- Certificate Item 10 -->
+            <div class="box">
+                <img src= "images/bharatml.png"  alt="Certificate 8">
+                <h3>Virtual Internship program Machine Learning</h3>
+                <p>Issued by: Bharat Intern(MSME)</p>
+                <p>Date: 10 june 2023</p>
+            </div>
+            <!-- Add more certificate items as needed -->
+        </div>
+    </div>
+</section>
 
 
     
+<section id="Education" class="Education">
+    <div class="container">
+        <div class="sec-top">
+            <h1>Education</h1>
+        </div>
 
-/* Media */
+        <div class="boxs">
+             <!-- Education Item 3 -->
+             <div class="box">
+                <img src="images/clg.jpg" alt="University Logo">
+                <h3>B.Tech - Computer Science</h3>
+                <p>Currently pursuing at Gita Autonomous College, Bhubaneswar</p>
+                <p>Secured 8.95 CGPA @6th sem</p>
+            </div>
+           
+            <!-- Education Item 2 -->
+            <div class="box">
+                <img src="images/college_logo.png" alt="College Logo">
+                <h3>Higher Secondary Education</h3>
+                <p>Completed from K.K.M. College</p>
+                <p>Secured 69% from BSEB Board</p>
+            </div>
+             <!-- Education Item 1 -->
+             <div class="box">
+                <img src="images/school_log0.png" alt="School Logo">
+                <h3>Secondary Education</h3>
+                <p>Completed from D.S.S. High School, Dhadhour</p>
+                <p>Secured 74% from BSEB Board</p>
+            </div>
+           
+        </div>
+    </div>
+</section>
 
-@media(max-width:1200px){
-    .contanier{
-        width: 90%;
-    }
-    .hero .content h1{
-        font-size: 50px;
-    }
-    .hero .content p{
-        font-size: 25px;
-    }
-    .hero .hero-img img{
-        width: 380px;
-    }
-    .hero{
-        padding-bottom: 40px;
-    }
-    .about .content h3{
-        font-size: 20px;
-    }
-    .about .content p{
-        margin-bottom: 50px;
-    }
-    .about .about-img img{
-        width: 380px;
-    }
-    .services .boxs .box h3{
-        font-size: 22px;
-    }
-    .contact form{
-        width: 70%;
-    }
 
-}
-@media(max-width:900px){
-    .hero .content h1{
-        font-size: 40px;
-    }
-    .hero .content p{
-        font-size: 22px;
-    }
-    .hero .hero-img img{
-        width: 340px;
-    }
-    header nav .nav-links a{
-        margin-left: 40px;
-    }
-    .about .contanier{
-        flex-direction: column;
-        text-align: center;
-    }
-    .about .about-img img{
-        width: 340px;
-    }
-    .about .about-img {
-        margin-bottom: 40px;
-    }
-    .boxs .box{
-        width: 45%;
-        margin-bottom: 40px;
-    }
-    .contact form{
-        width: 80%;
-    }
-}
-@media(max-width:780px){
-    .hero .contanier{
-        flex-direction: column-reverse;
-    }
-    .hero .hero-img img{
-        width: 380px;
-    }
-    .hero .content h1{
-        font-size: 50px;
-    }
-    .hero .content{
-        margin-top: 40px;
-        text-align: center;
-    }
-    .btn{
-        padding: 12px 25px;
-    }
-    #btn-menu{
-        display: block;
-        color: #fff;
-        font-size: 40px;
 
-    }
-    header nav .nav-links{
-        position: absolute;
-        top: -350px;
-        left: 0;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        background-color: #1c1e22;
-    }
-    header nav .nav-links.active{
-        top: 100%;
-    }
-    header nav .nav-links a{
-        width: 100%;
-        margin: auto;
-        padding: 20px;
-        text-align: center;
-        font-size: 20px;
-        border-bottom: 1px solid #444;
-    }
-    header nav .nav-links a.active,
-    header nav .nav-links a:hover{
-        background-color: #ffaa17;
-        color: #1c1e22;
-    }
-}
-@media(max-width:670px){
-    .hero .content h1{
-        font-size: 40px;
-    }
-    .hero .hero-img img{
-        width: 320px;
-    }
-    .boxs{
-        justify-content: center;
+<!-- Contact Section-->
+          <section id="Contact" class="contact">
+            <div class="container">
+                <div class="sec-top">
+                    <h1>Contact <span>Me</span></h1>
+                </div>
+                <ul>
+                    <li>
+                        <a href="tel:7282891316">
+                            <img src="images/wapp.png" alt="Phone">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:kumarshubham7282@gmail.com">
+                            <img src="images/gmail.png" alt="Gmail">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/shubham-kumar-15a61523a">
+                            <img src="images/link.png" alt="LinkedIn">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/shubham_singh_rajput_72/">
+                            <img src="images/insta.jpeg" alt="Instagram">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        
 
-    }
-    .boxs .box{
-        width: 90%;
-    }
-    .contact form{
-        width: 90%;
-    }
-}
-@media(max-width:500px){
-    .hero .hero-img img{
-        width: 280px;
-    }
-    .contact form{
-        width: 90%;
-        justify-content: center;
-
-    }
-    .contact form input{
-        width: 100%;
-    }
-}
-
-/* For screens with a maximum width of 1200px */
-@media (max-width: 1200px) {
-    .project .project-box {
-        width: 45%;
-        margin-right: 5%;
-        margin-bottom: 20px;
-    }
-}
-
-/* For screens with a maximum width of 900px */
-@media (max-width: 900px) {
-    .project .project-box {
-        width: 90%;
-        margin-right: 0;
-    }
-}
-
-/* For screens with a maximum width of 768px */
-@media (max-width: 768px) {
-    .project .project-box {
-        width: 90%;
-        margin-right: 0;
-    }
-}
+    </script>
+</body>
+</html>
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2023 shubham. All rights reserved.</p>
+           
+    </div>
+    <button><a href="#home" class="back-to-top">Back to Top</a>
+    </button>
+</footer>
