@@ -150,7 +150,10 @@ header nav .nav-links a.active{
  /* start about */ 
 
  .about {
+    text-align: center;
     padding: 90px 0 50px;
+    margin-bottom: 40px;
+
  }
 .about .contanier{
     display: flex;
@@ -603,4 +606,3 @@ header nav .nav-links a.active{
         margin-right: 0;
     }
 }
-
