@@ -68,8 +68,9 @@ header{
 
 }
 header.active{
-    background-color: #39404d;
-    border-bottom: 1px solid #8888884a;
+
+    background-color: #414b5d;
+    border-bottom: 1px solid #6b6b6b4a;
 }
 header nav{
     display: flex;
@@ -137,7 +138,7 @@ header nav .nav-links a.active{
 }
 .hero .hero-img img{
     position: relative;
-    top: 50px;
+    top: 70px;
     padding-top: 10px;
     background: url(images/skimg3.jpg);
     min-height: 10vh;
@@ -411,7 +412,7 @@ header nav .nav-links a.active{
 }
 
 .contact img {
-    width: 30px; /* Adjust the width as needed */
+    width: 40px; /* Adjust the width as needed */
     height: 30px; /* Adjust the height as needed */
     cursor: pointer;
 }
